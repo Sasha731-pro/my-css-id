@@ -1,9 +1,15 @@
 {
-  "name": {
-    "description": "Задаёт имя элемента, которое можно использовать для ссылок или форм.",
-    "elements": ["meta", "input", "form", "iframe", "a"],
+  "alt": {
+    "description": "Альтернативный текст для изображений.",
+    "elements": ["img"],
     "syntax": "string",
-    "example": "<meta name=\"viewport\">"
+    "example": "<img src=\"image.jpg\" alt=\"Описание изображения\">"
+  },
+  "charset": {
+    "description": "Указывает кодировку символов для документа.",
+    "elements": ["meta"],
+    "syntax": "charset name (например, utf-8)",
+    "example": "<meta charset=\"utf-8\">"
   },
   "class": {
     "description": "Указывает один или несколько классов для стилизации через CSS.",
@@ -11,29 +17,11 @@
     "syntax": "string (разделённые пробелами)",
     "example": "<div class=\"container main\">"
   },
-  "id": {
-    "description": "Уникальный идентификатор элемента для ссылок, JavaScript и CSS.",
-    "elements": ["*"],
-    "syntax": "string",
-    "example": "<div id=\"header\">"
-  },
-  "viewport": {
-    "description": "Значение атрибута name в мета-теге для управления видом страницы на мобильных устройствах.",
-    "elements": ["meta"],
-    "syntax": "string",
-    "example": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">"
-  },
   "content": {
     "description": "Содержимое мета-тега или другого элемента.",
     "elements": ["meta", "link"],
     "syntax": "string",
     "example": "<meta name=\"description\" content=\"Описание страницы\">"
-  },
-  "width": {
-    "description": "Ширина элемента (в пикселях или других единицах).",
-    "elements": ["img", "canvas", "input", "video"],
-    "syntax": "number | percentage",
-    "example": "<img width=\"300\" src=\"image.jpg\">"
   },
   "device-width": {
     "description": "Значение в content мета-тега viewport, устанавливающее ширину по ширине устройства.",
@@ -41,17 +29,35 @@
     "syntax": "part of viewport content",
     "example": "<meta name=\"viewport\" content=\"width=device-width\">"
   },
+  "href": {
+    "description": "Ссылка на ресурс.",
+    "elements": ["a", "link"],
+    "syntax": "URL",
+    "example": "<a href=\"https://example.com\">Ссылка</a>"
+  },
+  "id": {
+    "description": "Уникальный идентификатор элемента для ссылок, JavaScript и CSS.",
+    "elements": ["*"],
+    "syntax": "string",
+    "example": "<div id=\"header\">"
+  },
   "initial-scale": {
     "description": "Начальный масштаб страницы в мета-теге viewport.",
     "elements": ["meta (в content)"],
     "syntax": "number (0.1 to 10.0)",
     "example": "<meta name=\"viewport\" content=\"initial-scale=1.0\">"
   },
-  "href": {
-    "description": "Ссылка на ресурс.",
-    "elements": ["a", "link"],
-    "syntax": "URL",
-    "example": "<a href=\"https://example.com\">Ссылка</a>"
+  "lang": {
+    "description": "Задаёт язык содержимого элемента.",
+    "elements": ["*"],
+    "syntax": "language code (например, en, ru)",
+    "example": "<html lang=\"ru\">"
+  },
+  "name": {
+    "description": "Задаёт имя элемента, которое можно использовать для ссылок или форм.",
+    "elements": ["meta", "input", "form", "iframe", "a"],
+    "syntax": "string",
+    "example": "<meta name=\"viewport\">"
   },
   "src": {
     "description": "Путь к внешнему ресурсу (изображение, скрипт и т.д.).",
@@ -59,10 +65,16 @@
     "syntax": "URL",
     "example": "<img src=\"image.jpg\" alt=\"Изображение\">"
   },
-  "alt": {
-    "description": "Альтернативный текст для изображений.",
-    "elements": ["img"],
+  "viewport": {
+    "description": "Значение атрибута name в мета-теге для управления видом страницы на мобильных устройствах.",
+    "elements": ["meta"],
     "syntax": "string",
-    "example": "<img src=\"image.jpg\" alt=\"Описание изображения\">"
+    "example": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">"
+  },
+  "width": {
+    "description": "Ширина элемента (в пикселях или других единицах).",
+    "elements": ["img", "canvas", "input", "video"],
+    "syntax": "number | percentage",
+    "example": "<img width=\"300\" src=\"image.jpg\">"
   }
 }
